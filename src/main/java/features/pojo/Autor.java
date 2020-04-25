@@ -42,9 +42,12 @@ public class Autor {
 
     @Override
     public String toString() {
-        return "Autor{" +
-                "id=" + id +
-                ", nome='" + nome + '\'' +
-                '}';
+        return String.format("""
+                        Autor{
+                            id:
+                            nome:
+                        }""",
+                id,
+                nome);
     }
 }

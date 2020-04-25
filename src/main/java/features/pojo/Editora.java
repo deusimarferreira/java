@@ -50,10 +50,14 @@ public class Editora {
 
     @Override
     public String toString() {
-        return "Editora{" +
-                "id=" + id +
-                ", nome='" + nome + '\'' +
-                ", endereco='" + endereco + '\'' +
-                '}';
+        return String.format("""
+                        Editora{
+                            id: %s,
+                            nome: %s,
+                            endereco: %s
+                        }""",
+                id,
+                nome,
+                endereco);
     }
 }
