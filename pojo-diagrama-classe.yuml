@@ -1,0 +1,13 @@
+//  {type:class}
+
+[Livro]<>1->[Editora]
+[Livro]<>1-autores 0..*>[Autor]
+
+// Livro detalhes
+[Livro|+ id : Long;+ titulo : var;+ isbn : var;+ genero : var;+ editora : Editora;+ autores : array|equals();hashCode();toString()]
+
+// Editora detalhes
+[Editora|+ id : Long;nome : var;+ endereco : var;+ equals();+ hashCode();+ toString()]
+
+// Autor detalhes
+[Autor|+ id : Long;+ nome : var|+ equals();+ hashCode();+ toString()]
